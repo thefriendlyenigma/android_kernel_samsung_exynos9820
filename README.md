@@ -7,7 +7,7 @@ Following the script specified, I've built the kernel with the respective flags 
   - `CONFIG_CGROUP_HUGETLB` as one of its dependencies appears to be hard-set to "No" by the system, 
   - `CONFIG_EXT3_FS_XATTR`, as the option is not present in the kernel build options at all.
 - Storage Drivers
-  - Due to not intending to use either BTRFS or ZFS (and I'm not sure whether they would work anyway)
+  - Due the instructions specifying that only the OVERLAY storage is used~
   - `CONFIG_BTRFS_FS`
   - `CONFIG_BTRFS_FS_POSIX_ACL`
   - zfs
@@ -27,7 +27,7 @@ The tested method I have used is with the `odin4` Linux binary and a clean Etern
 7. Wait for the light blue "Downloading..." screen to appear on your S10e.
 8. If using a Linux PC: open the directory `boot.img.tar` is inside with your terminal, then type in `odin4 -a boot.img.tar`
 9. If using a Windows PC: open Odin, then select boot.img.tar in the AP section.
-10. The device should flash, and then reboot.
+10. The kernel should be flashed to the device, and then the device will reboot shortly~
 
 
 ## Building
